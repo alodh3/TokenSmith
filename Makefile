@@ -1,8 +1,9 @@
-.PHONY: help env build-llama clean test run-index run-chat install update-env
+.PHONY: help env build-llama clean test run-index run-chat install update-env setup
 
 help:
 	@echo "TokenSmith - RAG Application (Conda Dependencies)"
 	@echo "Available targets:"
+	@echo "  setup       - Run one-command automated setup (recommended)"
 	@echo "  env         - Create conda environment with all dependencies"
 	@echo "  update-env  - Update environment from environment.yml"
 	@echo "  build-llama - Build llama.cpp (if not found)"  
@@ -11,6 +12,10 @@ help:
 	@echo "  clean       - Clean build artifacts"
 	@echo "  show-deps   - Show installed conda packages"
 	@echo "  export-env  - Export current environment"
+
+# One-command automated setup
+setup:
+	@bash setup.sh
 
 # Environment setup - installs all dependencies via conda
 env:
