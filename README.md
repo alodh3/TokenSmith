@@ -25,6 +25,25 @@
   * Linux: GCC, make, CMake
   * Windows: Visual Studio Build Tools
 
+## One-Command Setup
+
+**Fastest way to get started — runs end-to-end in one command:**
+
+```shell
+bash <(curl -s https://raw.githubusercontent.com/georgia-tech-db/TokenSmith/main/setup.sh)
+```
+
+This script automatically: clones the repo, creates a Conda environment, downloads models from Hugging Face, indexes a sample document, and displays instructions to launch the chat.
+
+**With custom directory and/or PDF:**
+```shell
+bash <(curl -s https://raw.githubusercontent.com/georgia-tech-db/TokenSmith/main/setup.sh) ~/my-tokensmith /path/to/textbook.pdf
+```
+
+**Typical time:** ~10-20 minutes (first run, mostly downloading models). Reruns skip completed steps and finish in <1 minute.
+
+**Windows:** Use WSL or Git Bash, or follow manual steps below.
+
 ## Quick Start
 
 ### 1) Clone the repository and Download the models
